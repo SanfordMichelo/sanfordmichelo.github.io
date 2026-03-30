@@ -1,0 +1,504 @@
+/* ====== GLOBAL STYLES ====== */
+
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: #333;
+   background-color: #0d1117;
+}
+
+.navbar-brand img {
+  filter: brightness(0) invert(1); /* turns dark logo into white */
+  transition: filter 0.3s ease;
+  width: 100px;
+  height: auto;
+}
+
+/* ====== NAVBAR STYLING ====== */
+header nav .nav-link {
+  color: #f8f9fa;          /* light color for black navbar */
+  font-size: 1.1rem;       /* bigger links */
+  font-weight: 500;         /* semi-bold */
+  margin-left: 15px;
+  position: relative;       /* for underline animation */
+  transition: color 0.3s ease;
+}
+
+header nav .nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;            /* space below text */
+  left: 0;
+  background-color: #0d6efd; /* accent color */
+  transition: width 0.3s ease;
+}
+
+header nav .nav-link:hover {
+  color: #0d6efd;          /* accent color on hover */
+}
+
+header nav .nav-link:hover::after {
+  width: 100%;             /* underline grows on hover */
+}
+
+
+/* ====== HERO SECTION ====== */
+.hero-section {
+  width: 100vw;
+  background: url("images/background.png") no-repeat center center;
+  background-size: cover;
+  color: white;
+  padding: 120px 0;
+  margin-bottom: 50px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  min-height: 80vh;
+  position: relative;
+}
+
+/* Optional overlay for better text readability */
+.hero-section::before {
+  content: '';
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.4);
+  z-index: 1;
+}
+.hero-section .container {
+  position: relative;
+  z-index: 2;
+}
+
+.hero-section h1 {
+  font-size: 4rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.hero-section p.lead {
+  font-size: 1.8rem;
+  margin-bottom: 30px;
+  font-weight: 500;
+}
+
+/* Hero button */
+.hero-section .btn-primary {
+  background-color: #0d6efd;
+  color: white;
+  padding: 12px 30px;
+  font-size: 1.1rem;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+}
+.hero-section .btn-primary:hover {
+  background-color: #0b5ed7;
+  transform: translateY(-3px);
+}
+
+
+
+/* ====== ABOUT SECTION ====== */
+
+.about-section {
+  background: #0d1117; /* same as other sections */
+  color: white;
+  padding: 80px 0;
+}
+
+/* Side Images */
+.about-side-img {
+  width: 100%;
+  height:80%;
+  object-fit: cover;
+  border-radius: 15px;
+  transition: 0.3s ease;
+}
+
+.about-side-img:hover {
+  transform: scale(1.05);
+}
+
+/* Center Card */
+.about-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  backdrop-filter: blur(10px);
+}
+
+/* Highlight text */
+.highlight {
+  color: #1abc9c;
+  font-weight: 600;
+}
+
+/* Icons */
+.about-card i {
+  font-size: 1.5rem;
+  color: #1abc9c;
+  transition: 0.3s;
+}
+
+.about-card i:hover {
+  transform: scale(1.2);
+}
+/*.....................*/
+/* About ENDED HERE */
+
+
+/* Section background */
+.skills-section {
+  background: #0b0f19; /* deep dark */
+  color: #ffffff;
+}
+
+/* Skill Card */
+.skill-box {
+  background: rgba(255, 255, 255, 0.05); /* slightly brighter */
+  padding: 25px;
+  border-radius: 15px;
+  transition: 0.3s ease;
+  height: 100%;
+  color: #ffffff;
+}
+
+.skill-box h5 {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Grid Layout */
+.skills-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 15px;
+}
+
+/* Each Skill Item */
+.skills-grid div {
+  width: 45%;
+  background: rgba(255, 255, 255, 0.08); /* brighter than before */
+  padding: 10px;
+  border-radius: 8px;
+  font-size: 14px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #eaeaea; /* soft white */
+  transition: 0.3s ease;
+}
+
+/* Icons */
+.skills-grid i {
+  color: #00ffc8; /* your accent color */
+  font-size: 16px;
+}
+
+/* Hover effect (IMPORTANT FIX) */
+.skills-grid div:hover {
+  background: #00ffc8;
+  color: #000; /* make text black on hover */
+}
+
+.skills-grid div:hover i {
+  color: #000;
+}
+
+
+/*--------------------
+SKILLS SECTION END HERE
+----------------------*/
+
+
+/* Projects Section */
+
+.projects-section {
+  background: #0d1117;
+  color: white;
+  padding: 80px 0;
+}
+
+/* Card */
+.project-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 15px;
+  overflow: hidden;
+  transition: 0.3s;
+}
+
+.project-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+}
+
+/* Image */
+.project-card img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+}
+
+/* Content */
+.project-content {
+  padding: 20px;
+}
+
+.project-content h5 {
+  margin-bottom: 10px;
+}
+
+.project-content p {
+  font-size: 0.9rem;
+  color: #ccc;
+}
+
+/* Tags */
+.project-tags {
+  margin: 15px 0;
+}
+
+.project-tags span {
+  display: inline-block;
+  background: rgba(26, 188, 156, 0.15);
+  color: #1abc9c;
+  padding: 5px 10px;
+  border-radius: 8px;
+  margin: 3px;
+  font-size: 0.8rem;
+}
+
+/* Buttons */
+.project-buttons a {
+  margin-right: 10px;
+}
+
+/* Base */
+body {
+  background: #0d1117;
+}
+
+.about-section {
+  background: #111827;
+}
+
+.skills-section {
+  background: #0d1117;
+}
+
+.projects-section {
+  background: #111827;
+}
+
+/* PROJECT SECTION ENDED HERE */
+
+/* ============================= */
+/* CONTACT SECTION DESIGN START */
+/* ============================= */
+
+/* Main section wrapper */
+.sm-contact-section {
+  padding: 100px 20px;
+ min-height: 80vh;
+  color: #ffffff;
+  font-family: Arial, sans-serif;
+}
+
+/* ================= HEADER ================= */
+
+/* Top header container */
+.sm-contact-header {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+/* Main heading */
+.sm-contact-title {
+  font-size: 40px;
+  font-weight: 700;
+
+  margin-bottom: 15px;
+}
+
+/* Subtitle text */
+.sm-contact-subtitle {
+  font-size: 18px;
+  color: #cbd5f5;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+  line-height: 1.6;
+}
+
+/* Highlighted part of subtitle */
+.sm-contact-subtitle span {
+  display: block;
+  margin-top: 10px;
+  color: #38bdf8;
+  font-weight: 500;
+}
+
+/* ================= MAIN CONTAINER ================= */
+
+.sm-contact-container {
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+/* ================= LEFT SIDE ================= */
+
+.sm-contact-info h3 {
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+.sm-contact-info p {
+  color: #cbd5f5;
+  margin-bottom: 25px;
+  line-height: 1.6;
+}
+
+.sm-contact-links a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #ffffff;
+  font-size: 16px;
+  transition: color 0.3s, transform 0.3s;
+}
+
+.sm-contact-links a i {
+  margin-right: 12px;
+  font-size: 20px;
+}
+
+.sm-contact-links a:hover {
+  color: #38bdf8;
+  transform: translateX(5px);
+}
+
+/* ================= RIGHT SIDE (FORM) ================= */
+
+.sm-contact-form-box {
+  background-color: #1e293b;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
+}
+
+.sm-contact-form-box h3 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #ffffff;
+}
+
+.sm-contact-form input,
+.sm-contact-form textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  font-size: 14px;
+}
+
+.sm-contact-form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 8px;
+  background-color: #38bdf8;
+  color: #000000;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.sm-contact-form button:hover {
+  background-color: #0ea5e9;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 768px) {
+  .sm-contact-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sm-contact-title {
+    font-size: 30px;
+  }
+}
+
+/* ============================= */
+/* CONTACT SECTION DESIGN END   */
+/* ============================= */
+
+
+/* Sections start invisible */
+.fade-section {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease, transform 1s ease;
+}
+
+/* When the section is visible, fade in */
+.fade-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+/* ====== FOOTER ====== */
+footer {
+  background-color: #111;
+  color: white;
+  text-align: center;
+}
+footer a {
+  color: white;
+  margin: 0 10px;
+  font-size: 1.3rem;
+  transition: color 0.3s ease;
+}
+footer a:hover {
+  color: #0d6efd;
+}
+
+/* ====== NAVBAR HOVER ====== */
+header nav .nav-link {
+  transition: color 0.3s;
+}
+header nav .nav-link:hover {
+  color: #0d6efd;
+}
+
+/* ====== RESPONSIVE ====== */
+@media (max-width: 768px) {
+  .hero-section h1 {
+    font-size: 2.2rem;
+  }
+  .hero-section p.lead {
+    font-size: 1.1rem;
+  }
+  .hero-section .btn-primary {
+    font-size: 1rem;
+    padding: 10px 25px;
+  }
+  .project-img {
+    height: 180px;
+  }
+}
